@@ -22,7 +22,7 @@ class TestSetup(IntegrationTestCase):
     def test_metadata__version(self):
         setup = getToolByName(self.portal, 'portal_setup')
         self.assertEqual(
-            setup.getVersionForProfile('profile-Products.PFGSelectionStringField:default'), u'1')
+            setup.getVersionForProfile('profile-Products.PFGSelectionStringField:default'), '1')
 
     def test_propertiestool__not_searchable(self):
         properties = getToolByName(self.portal, 'portal_properties')

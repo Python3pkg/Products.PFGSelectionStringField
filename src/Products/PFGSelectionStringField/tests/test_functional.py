@@ -57,7 +57,7 @@ def setUp(self):
         'form': form,
         'form_url': form_url,
     })
-    for key in form.keys():
+    for key in list(form.keys()):
         del form[key]
     form.thanksPage = ''
     form.reindexObject()

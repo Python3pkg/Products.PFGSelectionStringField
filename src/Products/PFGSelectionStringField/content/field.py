@@ -60,7 +60,7 @@ class StringVocabularyField(StringField):
 
         :rtype: bool
         """
-        if isinstance(item[1][1], unicode):
+        if isinstance(item[1][1], str):
             return True
         return False
 
@@ -90,7 +90,7 @@ class PFGSelectionStringField(FGSelectionField):
                 description_msgid="help_fgformat_text"))))
 
     schema['fgVocabulary'].widget.description = _(
-        u"Use one line per option. Format: 'value|label|description'.")
+        "Use one line per option. Format: 'value|label|description'.")
 
     finalizeFieldSchema(schema, folderish=True, moveDiscussion=False)
 
@@ -121,16 +121,16 @@ class PFGSelectionStringField(FGSelectionField):
         vocabulary = self.fgField.Vocabulary(self)
         item = dict(vocabulary).get(vu)
         if self.fgFormat == 'radio' or (self.fgFormat == 'flex' and len(vocabulary) <= 4):
-            name = u'{}_{}'.format(self.__name__, vu)
+            name = '{}_{}'.format(self.__name__, vu)
         else:
-            name = u'{}_SELECT'.format(self.__name__)
+            name = '{}_SELECT'.format(self.__name__)
         desc = REQUEST.form.get(name, None)
         if item is None:
             return vu
         elif desc is None:
             return safe_unicode(cgi.escape(item[0].encode(charset)))
         else:
-            return u'{}<br />{}'.format(safe_unicode(cgi.escape(item[0].encode(charset))), safe_unicode(cgi.escape(desc.decode(charset))))
+            return '{}<br />{}'.format(safe_unicode(cgi.escape(item[0].encode(charset))), safe_unicode(cgi.escape(desc.decode(charset))))
 
 
 registerATCT(PFGSelectionStringField, PROJECTNAME)

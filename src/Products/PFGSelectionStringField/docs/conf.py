@@ -34,8 +34,8 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'Products.PFGSelectionStringField'
-copyright = u'2011-2013, Taito Horiuchi'
+project = 'Products.PFGSelectionStringField'
+copyright = '2011-2013, Taito Horiuchi'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -172,7 +172,7 @@ latex_paper_size = 'a4'
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title, author, documentclass [howto/manual]).
 latex_documents = [(
-    'index', 'Products.PFGSelectionStringField.tex', u'Products.PFGSelectionStringField Documentation', u'Taito Horiuchi', 'manual'), ]
+    'index', 'Products.PFGSelectionStringField.tex', 'Products.PFGSelectionStringField Documentation', 'Taito Horiuchi', 'manual'), ]
 
 # The name of an image file (relative to this directory) to place at the top of
 # the title page.
@@ -206,6 +206,6 @@ man_pages = [
     (
         'index',
         'todo',
-        u'Products.PFGSelectionStringField Documentation',
-        [u'Taito Horiuchi'],
+        'Products.PFGSelectionStringField Documentation',
+        ['Taito Horiuchi'],
         1)]
